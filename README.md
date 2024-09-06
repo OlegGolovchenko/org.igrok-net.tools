@@ -1,18 +1,23 @@
-## Getting Started
+## IgRok Net tools
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+package contains Email validator and Activation client
 
-## Folder Structure
+## Usage
 
-The workspace contains two folders by default, where:
+as command line tool
+``` powershell
+java -cp ".\lib\org.igrok-net.hasher.jar;.\org.igrok-net.tools.jar" org.igrok_net.tools.Main -v -a <activation email> <license code from igrok-net.org> -e <email to validate>
+```
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+as library
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+``` java
+// activate
+// if you use key directly
+EmailValidator.activate(activationEmail, key, null);
+//if you use license file
+EmailValidator.activate(activationEmail, null, filePath);
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+// validate email
+EmailValidator.validate(email);
+```
