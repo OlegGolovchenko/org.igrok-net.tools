@@ -17,7 +17,9 @@ display header and license information
 ##### -a
 activate product with given email and key
 use as follows: -a <activation email> <product key>
-#####
+##### -e
+email to validate
+use as follows: -e <email to validate>
 
 ### as library
 
