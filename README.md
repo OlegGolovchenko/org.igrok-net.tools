@@ -4,12 +4,22 @@ package contains Email validator and Activation client
 
 ## Usage
 
-as command line tool
+To get product key please visit https://igrok-net.org/keys or http://igrok-net.org/keys if you are on windows xp.
+To run this product you need java 8 or higher. We recommend to use java 8 if on windows xp or latest lts java if on newer systems.
+
+### as command line tool
 ``` powershell
 java -cp ".\lib\org.igrok-net.hasher.jar;.\org.igrok-net.tools.jar" org.igrok_net.tools.Main -v -a <activation email> <license code from igrok-net.org> -e <email to validate>
 ```
+#### command line arguments
+##### -v
+display header and license information
+##### -a
+activate product with given email and key
+use as follows: -a <activation email> <product key>
+#####
 
-as library
+### as library
 
 ``` java
 // activate
